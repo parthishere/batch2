@@ -25,12 +25,20 @@
 
 
 
-def add(a, b, c):
-    return a+ b+ c
+def add(*args, **kwargs):
+    ls = list([])
+    for i in range(0, len(args) -1):
+        # print(args[i], args[i+1])
+        c = args[i] + args[i+1]
+        ls.append(c)
+        # print(c)
+    return ls
+    # return a+ b+ c
 
 
 def another_main():
-    print(add(1, 2, 3, 4, 5, 6, 7, 8, 9))
+    ls = add(1, 1, 1, 1, 1, 1, 1, 1, this=11)
+    print(ls)
     
 
 if __name__ == "__main__":
