@@ -34,4 +34,43 @@
 #         print("element not found")        
     
             
-binary_search(14, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
+# binary_search(14, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13])
+
+# def custom_decorator(fun):
+#     def wrapper(*args, **kwargs):
+#         print("this are some task that should be taken care before execution")
+#         result = fun(*args, **kwargs)
+#         print(result)
+#         print("this are some other tasks that should be executed after function completion")
+#         return result
+#     return wrapper
+
+# @custom_decorator
+# def sum(parv):
+#     for i in range(0, parv):
+#         yield (i + (i +1))
+        
+# a = sum(10)
+# print(a)
+# for i in a:
+#     print(i)
+
+def class_avg(__dict):
+    avg = 0
+    for i in __dict.values():
+        avg += i
+    avg = avg / len(__dict)
+    print(avg)
+
+
+num_of_students = int(input("Enter number of students: "))
+dict_of_students = dict([])
+
+for i in range(0, num_of_students):
+    name = input(f"Enter name of student {i} and marks saparated with ' ' : ")
+    a = name.split()
+  
+    dict_of_students.update({a[0]: int(a[1])})
+    
+class_avg(dict_of_students)
+    
