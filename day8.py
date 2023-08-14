@@ -1,12 +1,12 @@
-# import time
-# def time_calc(fun):
-#     def wrapper(*args, **kwargs):
-#         a = time.time()
-#         res = fun()
-#         b = time.time()
-#         print(b - a)
-#         return res
-#     return wrapper
+import time
+def time_calc(fun):
+    def wrapper(*args, **kwargs):
+        a = time.time()
+        res = fun()
+        b = time.time()
+        print(b - a)
+        return res
+    return wrapper
 
 # @time_calc
 # def main():
@@ -66,57 +66,57 @@
 # print(b.speak())
 
 
-class A():
-    class_a = 10
+# class A():
+#     class_a = 10
     
-    def __init__(self):
-        self.radius = 1
-        self.a = 10
-        self._a = 2
-        self.__a = 3
+#     def __init__(self):
+#         self.radius = 1
+#         self.a = 10
+#         self._a = 2
+#         self.__a = 3
         
-    def __del__(self):
-        print("destructor called")
+#     def __del__(self):
+#         print("destructor called")
     
-    def method_a(self):
-        print("method from A")
+#     def method_a(self):
+#         print("method from A")
      
-    @property   
-    def rad(self):
-        return self.radius
+#     @property   
+#     def rad(self):
+#         return self.radius
     
-    @rad.setter   
-    def rad_set(self, value):
-        self.radius = value
+#     @rad.setter   
+#     def rad_set(self, value):
+#         self.radius = value
        
-    def __repr__(self):
-        return f"A class with properties"
+#     def __repr__(self):
+#         return f"A class with properties"
         
-class B():
-    def __init__(self):
-        pass
+# class B():
+#     def __init__(self):
+#         pass
     
-    def method_b(self):
-        print("method from b")
+#     def method_b(self):
+#         print("method from b")
         
         
-class C(A, B):
-    def __init__(self):
-        pass
+# class C(A, B):
+#     def __init__(self):
+#         pass
     
-    def method_c(self):
-        print("method from c")
+#     def method_c(self):
+#         print("method from c")
         
-a = A()
+# a = A()
 
-print(a.a)       
-print(a._a)  
+# print(a.a)       
+# print(a._a)  
 
-a.rad_set = 10
-print(a.rad)
+# a.rad_set = 10
+# print(a.rad)
 
            
-c = C()
-c.method_a()
+# c = C()
+# c.method_a()
 
 
